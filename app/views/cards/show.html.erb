@@ -1,0 +1,10 @@
+<div class="container">
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Edit Card', edit_deck_card_path(@card.deck, @card) %>
+  <h2>Front: <%= @card.front %></h2>
+  <h2>Back: <%= @card.back %></h2>
+  <%= link_to 'Destroy Card', deck_card_path(@card.deck, @card), data: {
+    turbo_method: :delete,
+    turbo_confirm: 'Are you sure?'
+  } %>
+</div>

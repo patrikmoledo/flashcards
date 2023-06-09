@@ -1,0 +1,7 @@
+<div class="container">
+  <%= link_to 'Home', root_path %>
+  <h1>Cards</h1>
+  <% @cards.each do |card| %>
+    <p><%= link_to card.front, deck_card_path(@deck, card) %></p>
+  <% end %>
+</div>
